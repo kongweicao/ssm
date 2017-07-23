@@ -1,0 +1,36 @@
+*{
+    padding : 0;
+    margin : 0;
+}
+body{
+    background-color: #EFF0F4;
+}
+
+.container {
+    background-color: #ffffff;
+    padding-top: 20px;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height : 40px;
+    background-color: #5BC0DE;
+    color : #ffffff;
+}
+
+.tab-item-title{
+    display: block;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.height{
+    margin-top : 20px;
+}
+
+.col-sm-2{
+    padding-right : 0px;
+}

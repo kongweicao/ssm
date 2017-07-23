@@ -1,5 +1,6 @@
 <html>
-<body>
-<h2>Hello World!</h2>
+<head>
+</head>
+<body  onload="location.href='index'">
 </body>
 </html>

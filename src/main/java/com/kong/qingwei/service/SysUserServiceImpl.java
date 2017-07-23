@@ -25,4 +25,13 @@ public class SysUserServiceImpl implements SysUserService {
         SysUserExample example = new SysUserExample();
         return sysUserMapper.selectByExample(example);
     }
+
+    /**
+     * 添加用户
+     * @param sysUser
+     * @return
+     */
+    public int addUser(SysUser sysUser) {
+        return sysUserMapper.insert(sysUser);
+    }
 }

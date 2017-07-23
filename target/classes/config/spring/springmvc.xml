@@ -10,8 +10,12 @@
     <!--视图渲染-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
-        <property name="suffix" value=".jsp"/>
+        <property name="suffix" value=".html"/>
     </bean>
+
+
+
     <!--控制器映射器和控制器适配器-->
+    <!-- 解决@resposneBody返回json 406错误-->
     <mvc:annotation-driven></mvc:annotation-driven>
 </beans>
