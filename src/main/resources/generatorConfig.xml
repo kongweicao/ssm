@@ -49,7 +49,7 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <table tableName="sys_user" domainObjectName="SysUser" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+        <table tableName="my_log" domainObjectName="MyLog" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true" ></table>
 
         <!-- 有些表的字段需要指定java类型
          <table schema="" tableName="">

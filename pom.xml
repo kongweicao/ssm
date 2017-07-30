@@ -24,6 +24,11 @@
   </build>
   <properties>
     <spring.version>4.1.1.RELEASE</spring.version>
+    <log.moduleName>ssm-qingwei</log.moduleName>
+    <log.base>logs</log.base>
+    <log.other.level>DEBUG</log.other.level>
+    <log.root.level>DEBUG</log.root.level>
+    <log.stdout.ref><![CDATA[<appender-ref ref="stdout" />]]></log.stdout.ref>
   </properties>
   <dependencies>
     <!-- springframe start -->
@@ -146,6 +151,19 @@
       <version>5.1.6</version>
     </dependency>
 
+    <!-- 分页https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>4.1.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.jsqlparser</groupId>
+      <artifactId>jsqlparser</artifactId>
+      <version>0.9.6</version>
+    </dependency>
+
+
     <!--jstl-->
     <dependency>
       <groupId>jstl</groupId>
@@ -170,5 +188,47 @@
       <version>2.4.4</version>
     </dependency>
     <!-- jackson end -->
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.35</version>
+    </dependency>
+    <!--log4j begin -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.logback-extensions</groupId>
+      <artifactId>logback-ext-spring</artifactId>
+      <version>0.1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>1.7.12</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+    <!--日志写入数据库 begin-->
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-pool</groupId>
+      <artifactId>commons-pool</artifactId>
+      <version>1.6</version>
+    </dependency>
+    <!--日志写入数据库end -->
+    <!--log4j end -->
   </dependencies>
 </project>

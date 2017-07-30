@@ -10,4 +10,7 @@ import java.util.List;
 public interface SysUserService {
     public List<SysUser> queryAll();
     public int addUser(SysUser sysUser);
+    public int updateUser(SysUser sysUser);
+    public int deleteUser(String userId);
+
 }

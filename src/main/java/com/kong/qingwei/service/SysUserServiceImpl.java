@@ -34,4 +34,28 @@ public class SysUserServiceImpl implements SysUserService {
     public int addUser(SysUser sysUser) {
         return sysUserMapper.insert(sysUser);
     }
+
+    /**
+     * 修改用户
+     * @param sysUser
+     * @return
+     */
+    public int updateUser(SysUser sysUser) {
+        SysUserExample example = new SysUserExample();
+        SysUserExample.Criteria criteria = example.createCriteria();
+        criteria.andUserIdEqualTo(sysUser.getUserId());
+        return sysUserMapper.updateByExampleSelective(sysUser,example);
+    }
+
+    /**
+     * 删除用户
+     * @param userId
+     * @return
+     */
+    public int deleteUser(String userId) {
+        SysUserExample example = new SysUserExample();
+        SysUserExample.Criteria criteria = example.createCriteria();
+        criteria.andUserIdEqualTo(userId);
+        return sysUserMapper.deleteByExample(example);
+    }
 }
