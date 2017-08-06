@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环遍历</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="kongwc">
+            <template v-for="(company,index) in companys">
+                <h1>{{company.name}}</h1>
+                <input  placeholder="请输入名字"  v-model="companys[index].search">
+                <ul v-for="user in searchData[index]">
+                    <li v-for="(value, key, index) in user">
+                        {{index}}  {{key}} : {{value}}
+                    </li>
+                </ul>
+            </template>
+    </div>
+</body>
+<script>
+    new Vue({
+        el : '#kongwc',
+        data : {
+                companys : [
+                    {   name : '华为',
+                        users : [
+                            {name : '神灵武士', skill : '沸腾之矛', height : 195},
+                            {name : '黑暗游侠', skill : '销魂箭', height : 163},
+                            {name : '裂魂人', skill : '暗影冲刺', height : 176}
+                        ],
+                        search : ''
+                    },
+                    {   name : '阿里巴巴',
+                        users : [
+                            {name : '光之守卫', skill : '冲击波', height : 203},
+                            {name : '末日使者', skill : '吞噬', height : 325},
+                            {name : '山岭巨人', skill : '反弹', height : 632}
+                        ],
+                        search : ''
+                    }
+                ]
+            },
+        watch: {
+
+        },
+        computed: {
+            searchData: function() {
+                var list = [];
+                for(var i=0; i<this.companys.length; i++){
+                    var search = this.companys[i].search;
+                    if (search){
+                       console.log(this.companys[i].users.filter(function (item) {
+                           return item.name.indexOf(search) > -1
+                       }));
+                        list.push(this.companys[i].users.filter(function (item) {
+                            return item.name.indexOf(search) > -1
+                        }));
+                        console.log(list);
+                    }else{
+                         list.push(this.companys[i].users);
+                    }
+                }
+                return list;
+            }
+        }
+    });
+</script>
+</html>
